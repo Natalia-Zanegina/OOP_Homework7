@@ -19,5 +19,5 @@ public interface Publisher {
      * @param companyName
      * @param salary
      */
-    void sendOffer(String companyName, Vacancy vacancy, double salary, Publisher jobAgency);
+    void sendOffer(String companyName, Vacancy vacancy, double salary);
 }

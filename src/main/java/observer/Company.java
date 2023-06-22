@@ -18,6 +18,6 @@ public class Company {
 
     public void needEmployee(Vacancy vacancy){
         double salary = random.nextDouble(3000, maxSalary);
-        jobAgency.sendOffer(companyName, vacancy, salary, jobAgency);
+        jobAgency.sendOffer(companyName, vacancy, salary);
     }
 }

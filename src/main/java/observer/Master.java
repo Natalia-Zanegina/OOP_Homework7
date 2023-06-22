@@ -20,12 +20,11 @@ public class Master implements Observer {
     }
 
     @Override
-    public void receiveOffer(String companyName, Vacancy vacancy, double salary, Publisher jobAgency) {
+    public void receiveOffer(String companyName, Vacancy vacancy, double salary) {
         if (minSalary <= salary){
             System.out.printf("Рабочий %s (%f) >>> Мне нужна эта работа! [%s - %s - %f]\n",
                     name, minSalary, companyName, vacancy, salary);
-            //minSalary = salary;
-            jobAgency.removeObserver(this);
+            minSalary = salary;
         }
         else {
             System.out.printf("Рабочий %s >>> Я найду работу получше (%f)! [%s - %s - %f]\n",
